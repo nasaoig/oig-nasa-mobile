@@ -1,31 +1,37 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <div class="p-2 text-light" style="background-color: #0b3d91">
+            <div class="h4 text-center">NASA OIG Mobile
+                <router-link to="/settings" class="btn btn-outline-light float-right">Settings</router-link>
+            </div>
+            
+        </div>
+        <div class="container">
+            <router-view />
+        </div>
     </div>
-    <router-view/>
-  </div>
 </template>
-
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
+<script>
+
+
+    //import BootstrapVue from 'bootstrap-vue'
+    import 'bootstrap/dist/css/bootstrap.css'
+    import 'bootstrap-vue/dist/bootstrap-vue.css'
+    //import Datepicker from 'vuejs-datepicker'
+    //import PortalVue from 'portal-vue'
+    // Vue.use(BootstrapVue);
+
+    export default {
+        name: 'App',
+        methods: {
+            select: function (e) {
+                this.$router.push('/reports/' + e.target.value);
+            }
+        }
+    }
+
+
+
+</script>

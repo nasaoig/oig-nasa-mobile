@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "oig-nasa-gov"
+  },
+  "targets": {
+    "oig-nasa-gov": {
+      "hosting": {
+        "mobile": [
+          "oig-nasa-mobile"
+        ]
+      }
+    }
+  }
+}

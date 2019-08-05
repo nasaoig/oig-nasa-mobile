@@ -1,0 +1,3 @@
+C:\NASA\Sandbox\PublicWeb\oig-nasa-mobile\obj\Debug\oig-nasa-mobile.njsproj.CoreCompileInputs.cache
+C:\NASA\Sandbox\PublicWeb\oig-nasa-mobile\bin\Microsoft.NodejsTools.WebRole.dll
+C:\NASA\Sandbox\PublicWeb\oig-nasa-mobile\obj\Debug\oig-nasa-mobile.njsprojAssemblyReference.cache
