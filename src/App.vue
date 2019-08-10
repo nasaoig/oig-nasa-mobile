@@ -1,17 +1,43 @@
 <template>
     <div id="app">
-        <div class="p-2 text-light" style="background-color: #0b3d91">
-            <div class="h4 text-center">NASA OIG Mobile
-                <router-link to="/settings" class="btn btn-outline-light float-right">Settings</router-link>
-            </div>
-            
+
+        <div>
+            <b-navbar type="dark" style="background-color:#0b3d91;">
+                <b-navbar-brand href="#/">
+                    <strong>NASA OIG Mobile</strong>
+                </b-navbar-brand>
+                <b-navbar-nav>
+                    <b-nav-item href="#/reports">Reports</b-nav-item>
+                    <b-nav-item href="#/video">Video</b-nav-item>
+                    <b-nav-item href="#/about">About</b-nav-item>
+               </b-navbar-nav>
+                <b-navbar-nav class="ml-auto">
+                    <b-nav-item-dropdown right class="no-caret">
+                        <template slot="button-content">
+                            <font-awesome-icon icon="ellipsis-v" title="menu"></font-awesome-icon>
+                        </template>
+                        <b-dropdown-item href="#/">Home</b-dropdown-item>
+                        <b-dropdown-item href="#/settings">Settings</b-dropdown-item>
+                        <b-dropdown-item href="#/about">About</b-dropdown-item>
+                    </b-nav-item-dropdown>
+                </b-navbar-nav>
+            </b-navbar>
         </div>
+
+        <!-- Page Content -->
         <div class="container">
             <router-view />
         </div>
+
     </div>
 </template>
+
+
+
 <style>
+    .no-caret .dropdown-toggle::after {
+        content: none;
+    }
 </style>
 <script>
 

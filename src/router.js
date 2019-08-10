@@ -20,6 +20,13 @@ export default new Router({
 
         },
         {
+            path: '/video/:id?',
+            name: 'video',
+            component: () => import(/* webpackChunkName: "video" */ './views/Video.vue'),
+            props: true
+
+        },
+        {
             path: '/reports/:id?',
             name: 'reports',
             component: () => import(/* webpackChunkName: "about" */ './views/Reports.vue'),

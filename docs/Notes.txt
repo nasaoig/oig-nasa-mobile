@@ -1,0 +1,19 @@
+
+
+Android PWA requires an 512x512 icon and 192x192 icon set in manifest.json
+The 512 image is used for the splash screen logo. The splash background color
+is set in manifest.json.
+
+Apple device icons must be added via meta tags in head, must be square, and not 
+have transparent backgrounds. These are optional, but device generated icons
+may not be as good.
+
+iOS requires specifically sized png images for splash screens.
+
+see:  https://medium.com/@applification/progressive-web-app-splash-screens-80340b45d210
+
+State Management
+Site data may be shared and presisted across the app using the Flux-Like Implementation
+https://vuejs.org/v2/guide/state-management.html
+
+

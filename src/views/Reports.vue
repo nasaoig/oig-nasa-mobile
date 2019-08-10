@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="py-2">
+        <div class="mb-1">
             Only most recent items displayed. For complete information visit: <a href="https://oig.nasa.gov" target="_blank">https://oig.nasa.gov</a>
         </div>
         <div class="list-group" v-for="item in items" v-bind:key="item.id">
@@ -52,7 +52,7 @@
 
                 // use cache on empty 
                 if (!items || !items.length) {
-                    var json = localStorage.getItem('data.items');
+                    json = localStorage.getItem('data.items');
                     items = json ? JSON.parse(json) : [];
                 }
 
@@ -80,7 +80,7 @@
 
                 var cacheExpires = parseInt(sessionStorage.getItem('cacheExpires') || '0');
 
-                console.info(cacheExpires, Date.now());
+                //console.info(cacheExpires, Date.now());
 
                 if (cacheExpires <= Date.now()) axios.get(url).then((response) => {
                     me.update(response.data.items);

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center mt-4">
+  <div class="text-center">
         <h4>Welcome!</h4>
         <p>The NASA Office of Inspector General mobile app</p>
   </div>
