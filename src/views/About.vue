@@ -1,5 +1,6 @@
 <template>
     <div class="text-center">
+        <p>Version: beta</p>
         Visit the NASA Office of Inspector General website at:<br>
         <a href="https://oig.nasa.gov" target="_blank">https://oig.nasa.gov</a>
         <p>

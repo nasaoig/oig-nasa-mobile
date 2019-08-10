@@ -7,9 +7,6 @@
                     <strong>NASA OIG Mobile</strong>
                 </b-navbar-brand>
                 <b-navbar-nav>
-                    <b-nav-item href="#/reports">Reports</b-nav-item>
-                    <b-nav-item href="#/video">Video</b-nav-item>
-                    <b-nav-item href="#/about">About</b-nav-item>
                </b-navbar-nav>
                 <b-navbar-nav class="ml-auto">
                     <b-nav-item-dropdown right class="no-caret">
@@ -17,6 +14,8 @@
                             <font-awesome-icon icon="ellipsis-v" title="menu"></font-awesome-icon>
                         </template>
                         <b-dropdown-item href="#/">Home</b-dropdown-item>
+                        <b-nav-item href="#/reports">Reports</b-nav-item>
+                        <b-nav-item href="#/video">Video</b-nav-item>
                         <b-dropdown-item href="#/settings">Settings</b-dropdown-item>
                         <b-dropdown-item href="#/about">About</b-dropdown-item>
                     </b-nav-item-dropdown>
