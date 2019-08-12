@@ -8,6 +8,11 @@ Vue.use(Router)
 export default new Router({
     routes: [
         {
+            path: '/test',
+            name: 'test',
+            component: () => import(/* webpackChunkName: "about" */ './views/Test.vue')
+        },
+        {
             path: '/settings',
             name: 'settings',
             component: () => import(/* webpackChunkName: "about" */ './views/Settings.vue')

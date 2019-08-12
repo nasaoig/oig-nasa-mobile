@@ -13,32 +13,32 @@
         <div class="ml-4">
         <div>
             <label>
-                <input type="checkbox" v-model="types" value="1">News
+                <input type="checkbox" v-model="Settings.types" value="1">News
             </label>
         </div>
         <div>
             <label>
-                <input type="checkbox" v-model="types" value="5">Testimony
+                <input type="checkbox" v-model="Settings.types" value="5">Testimony
             </label>
         </div>
         <div>
             <label>
-                <input type="checkbox" v-model="types" value="2">Semiannual Reports
+                <input type="checkbox" v-model="Settings.types" value="2">Semiannual Reports
             </label>
         </div>
         <div>
             <label>
-                <input type="checkbox" v-model="types" value="11">Management Challenges
+                <input type="checkbox" v-model="Settings.types" value="11">Management Challenges
             </label>
         </div>
         <div>
             <label>
-                <input type="checkbox" v-model="types" value="7">Special Reports
+                <input type="checkbox" v-model="Settings.types" value="7">Special Reports
             </label>
         </div>
         <div>
             <label>
-                <input type="checkbox" v-model="types" value="8">Export Compliance
+                <input type="checkbox" v-model="Settings.types" value="8">Export Compliance
             </label>
         </div>
         </div>
@@ -47,12 +47,12 @@
         <div class="ml-4">
         <div>
             <label>
-                <input type="checkbox" v-model="types" value="10">Audit Projects
+                <input type="checkbox" v-model="Settings.types" value="10">Audit Projects
             </label>
         </div>
         <div>
             <label>
-                <input type="checkbox" v-model="types" value="3">Audit Reports
+                <input type="checkbox" v-model="Settings.types" value="3">Audit Reports
             </label>
         </div>
         </div>
@@ -61,12 +61,12 @@
         <div class="ml-4">
         <div>
             <label>
-                <input type="checkbox" v-model="types" value="12">Press Releases
+                <input type="checkbox" v-model="Settings.types" value="12">Press Releases
             </label>
         </div>
         <div>
             <label>
-                <input type="checkbox" v-model="types" value="4">Investigations
+                <input type="checkbox" v-model="Settings.types" value="4">Investigations
             </label>
         </div>
         </div>
@@ -87,12 +87,16 @@
 
 
 <script>
+
+    import Settings from '../models/Settings'
+
     export default {
+
         name: 'Settings',
 
         data: function () {
             return {
-                types: []
+                Settings
             }
         },
 
@@ -101,14 +105,16 @@
                 this.$router.push('/');
             },
             save() {
-                localStorage.setItem('settings.types', JSON.stringify(this.$data.types));
+                this.$data.Settings.save();
+                alert(this.$data.Settings.types);
+                //localStorage.setItem('settings.types', JSON.stringify(this.$data.types));
                 this.$router.push('/');
             }
         },
         mounted() {
 
-            var json = localStorage.getItem('settings.types');
-            this.$data.types = json ? JSON.parse(json) : [];
+            //var json = localStorage.getItem('settings.types');
+            //this.$data.types = json ? JSON.parse(json) : [];
 
         }
     }

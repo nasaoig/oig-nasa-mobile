@@ -30,21 +30,23 @@
 
 <script>
 
-    import axios from 'axios'
+    import SiteData from '../models/SiteData'
+    import Settings from '../models/Settings'
 
-    var LIMIT = 25;  // max number of data items to display
 
     export default {
 
         data: function () {
             return {
-
-                items: []
+                SiteData,
+                Settings,
+                items: SiteData.select()
             }
         },
 
         methods: {
 
+            /*
             update(items) {
 
                 var json = localStorage.getItem('settings.types');
@@ -87,13 +89,16 @@
                     sessionStorage.setItem('cacheExpires', Date.now() + 3600000); // hour in miliseconds
                 });
             }
+            */
 
         },
         mounted() {
 
+            alert(SiteData.select().length);
+
             // use cached data on startup when available
-            this.update();
-            this.load();
+            //this.update();
+            //this.load();
         }
      }
 

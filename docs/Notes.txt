@@ -16,4 +16,7 @@ State Management
 Site data may be shared and presisted across the app using the Flux-Like Implementation
 https://vuejs.org/v2/guide/state-management.html
 
+GOOGLE FIREBASE
 
+Storage root
+gs://oig-nasa-gov.appspot.com

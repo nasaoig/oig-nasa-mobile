@@ -2,7 +2,7 @@
     <div id="app">
 
         <div>
-            <b-navbar type="dark" style="background-color:#0b3d91;">
+            <b-navbar type="dark" style="background-color:#0b3d91;" fixed="top">
                 <b-navbar-brand href="#/">
                     <strong>NASA OIG Mobile</strong>
                 </b-navbar-brand>
@@ -24,7 +24,7 @@
         </div>
 
         <!-- Page Content -->
-        <div class="container">
+        <div class="container" style="margin-top:75px;">
             <router-view />
         </div>
 
